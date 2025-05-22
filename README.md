@@ -5,7 +5,8 @@ Este repositorio contiene la maqueta del sistema de gestión financiera **GASTU*
 ---
 
 ## 📁 Estructura de carpetas
-MAQUETA_GASTU/
+```
+maqueta_GASTU/
 │
 ├── assets/ # Archivos estáticos del proyecto
 │ ├── css/ # Hojas de estilo
@@ -26,3 +27,16 @@ MAQUETA_GASTU/
 │ └── index.html # Landing page inicial del proyecto
 │
 ├── README.md # Documentación del proyecto
+```
+
+### 📘 Descripción de carpetas y archivos
+
+- **`assets/`** – Archivos estáticos.
+  - `css/` → Hojas de estilo globales.
+  - `img/` → Imágenes como íconos, logos, etc.
+  - `js/` → Scripts JS (validaciones, carga de componentes, etc.).
+- **`components/`** – Fragmentos HTML reutilizables como `navbar`, `footer`, `header`.
+- **`views/`** – Vistas HTML individuales que representan pantallas del sistema.
+- **`README.md`** – Documentación del proyecto.
+
+---
