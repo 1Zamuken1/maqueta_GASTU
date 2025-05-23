@@ -1,0 +1,129 @@
+/* Sidebar base */
+.sidebar {
+  width: 250px;
+  background-color: #e0e0e0;
+  color: #222;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  border-right: 1px solid #bdbdbd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1rem;
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  text-decoration: none;
+  color: #222;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+  border-left: 4px solid transparent;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+  background-color: #bdbdbd;
+  border-left: 4px solid #222;
+}
+
+/* Footer */
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #bdbdbd;
+  padding: 0.5rem 0;
+  background: #e0e0e0;
+}
+
+.sidebar-footer a {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  color: #222;
+  font-size: 1.05rem;
+  transition: background 0.2s;
+}
+
+.sidebar-footer a.active,
+.sidebar-footer a:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* Toggle button */
+#toggleBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #222;
+  cursor: pointer;
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Íconos y textos en los enlaces */
+.sidebar-menu li a .icon,
+.sidebar-footer a .icon {
+  min-width: 32px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.sidebar-menu li a .text,
+.sidebar-footer a .text {
+  margin-left: 10px;
+  transition: opacity 0.2s, width 0.2s;
+  white-space: nowrap;
+}
+
+/* Sidebar colapsada: solo íconos visibles */
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed .text {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-header {
+  justify-content: center;
+}
+
+.sidebar.collapsed #toggleBtn {
+  margin-left: 0;
+}
+
+/* Ajusta el main para que no quede tapado */
+body .sidebar.collapsed ~ main {
+  margin-left: 80px !important;
+}
